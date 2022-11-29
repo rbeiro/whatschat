@@ -1,0 +1,57 @@
+.messageContainer {
+  display: flex;
+  width: 100%;
+  
+
+  padding: 0 var(--space-7);
+  margin-bottom: var(--space-3);
+
+  p {
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radii-sm);
+    z-index: 3;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      top: 0;
+
+      height: var(--space-5);
+      width: var(--space-5);
+
+      border-radius: 4px;
+    }
+  }
+
+
+}
+
+.sentMessage {
+  justify-content: flex-end;
+  p {
+    background-color: var(--purple9);
+
+    &::after {
+      right: 0;
+      background-color: var(--purple9);
+      clip-path: polygon(0 0, 100% 0%, 0% 100%);
+      transform:  translateX(60%);
+    }
+  }
+}
+
+.receivedMessage {
+  p {
+    background-color: var(--purple7);
+
+    &::after {
+      left: 0;
+      background-color: var(--purple7);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%);
+      transform:  translateX(-60%);
+    }
+  }
+}

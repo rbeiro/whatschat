@@ -1,0 +1,46 @@
+@import "./variables";
+
+
+
+:root {
+  --radii-sm: 6px;
+  --transition-basic: cubic-bezier(0.25 0.46 0.45 0.94) 0s;
+  //--animation-shimmer: shimmer
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: $grayBackground;
+  color: $grayText;
+  line-height: var(--lineHeight-base);
+};
+
+body, input, textarea, button {
+  font-family: $textFont;
+  font-weight: var(--fontWeight-regular);
+};
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+};
+
+.dark-theme {
+  color-scheme: dark;
+}
+
+[data-nextjs-scroll-focus-boundary] {
+  width: 100%;
+  height: 100%;
+}
+
+

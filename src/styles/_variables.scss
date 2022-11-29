@@ -1,0 +1,23 @@
+@import "@rbeiro-ui/tokens/css/index.css";
+
+@import "@radix-ui/colors/blackA.css";
+@import "@radix-ui/colors/whiteA.css";
+
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/grayDark.css";
+
+@import "@radix-ui/colors/purple.css";
+@import "@radix-ui/colors/purpleDark.css";
+
+
+//Gray colors
+$grayBackground: var(--gray1);
+$grayBackgroundSubtle: var(--gray2);
+$grayText: var(--gray12);
+
+
+
+//Font
+$textFont: 'Roboto', Arial, Helvetica, sans-serif;
+$headingFont: 'Poppins', Arial, Helvetica, sans-serif;
+
