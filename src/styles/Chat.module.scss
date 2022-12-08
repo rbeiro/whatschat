@@ -6,6 +6,15 @@
   flex-direction: column;
 }
 
+.pageCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  color: var(--gray10);
+}
+
 .topUserBar {
   display: flex;
   align-items: center;
@@ -88,7 +97,7 @@
 
   form {
     display: grid;
-    grid-template-columns: 1fr var(--space-20);
+    grid-template-columns: 1fr var(--space-20) var(--space-20);
     gap: var(--space-6);
 
     button {

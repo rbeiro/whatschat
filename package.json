@@ -14,15 +14,22 @@
     "@rbeiro-ui/stitches-config": "^1.1.0",
     "@rbeiro-ui/tokens": "^2.0.1",
     "@stitches/react": "^1.2.8",
+    "@supabase/supabase-js": "^2.1.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "axios": "^1.2.0",
+    "date-fns": "^2.29.3",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "next": "13.0.5",
+    "next-auth": "^4.17.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.56.1",
-    "typescript": "4.9.3"
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4",
+    "typescript": "4.9.3",
+    "zustand": "^4.1.5"
   }
 }

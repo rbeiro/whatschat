@@ -1,10 +1,37 @@
-import { ReactNode } from "react";
-import { Header } from "../src/components/Header";
+'use client'
+import { ReactNode, useEffect } from "react";
+import { SessionProvider } from 'next-auth/react';
 
 import s from "../src/styles/Layout.module.scss"
 import "../src/styles/global.scss"
+import { socket } from "../src/lib/socket-client";
+
 
 export default function RootLayout({children}: {children: ReactNode}) {
+  
+  useEffect(() => {
+    const socketInitializer = async () => {
+
+      await fetch('/api/socket')
+  
+      socket.on('connection', () => {
+        console.log('connected')
+      })
+
+      socket.on('disconnet', () => {
+        console.log('disconneted')
+      })
+    }
+
+    socketInitializer()
+
+    return () => {
+      socket.off('connect');
+      socket.off('disconnect');
+      socket.off('newIncomingMessage')
+    };
+  },[])
+
   return(
     <html lang="pt-br" className="dark-theme">
       <head>
@@ -16,17 +43,7 @@ export default function RootLayout({children}: {children: ReactNode}) {
       </head>
 
       <body className={s.container}>
-        <div className={s.contentWrapper}>
-          <div className={s.content}>
-            <Header />
-
-            <main className={s.mainContainer}>
-              {children}
-            </main>
-          </div>
-        </div>
-        
-        
+          {children}
       </body>
     </html>
   )

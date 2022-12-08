@@ -5,13 +5,13 @@ import Image from "next/image"
 interface MessageProps {
   sentMessage: boolean;
   content: string;
+  timestamp: string;
 }
 
-export function Message({ sentMessage, content }: MessageProps) {
+export function Message({ sentMessage, content, timestamp }: MessageProps) {
   return(
     <div className={`${sentMessage ? s.sentMessage: s.receivedMessage} ${s.messageContainer}`}>
-      <p>{content}</p>
-      
+      <p>{content} <span className={s.timestamp}>{timestamp}</span></p>
     </div>
   )
 }

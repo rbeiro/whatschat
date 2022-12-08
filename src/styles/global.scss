@@ -4,7 +4,11 @@
 
 :root {
   --radii-sm: 6px;
+  --radii-full: 99999px !important;
   --transition-basic: cubic-bezier(0.25 0.46 0.45 0.94) 0s;
+  --colors-primary500: var(--purple9) !important;
+  --colors-primary300: var(--purple10) !important;
+
   //--animation-shimmer: shimmer
 }
 
